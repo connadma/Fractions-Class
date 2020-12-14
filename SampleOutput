@@ -1,0 +1,9 @@
+/*
+    "C:\Program Files\Java\jdk-11.0.2\bin\java.exe" "-javaagent:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2020.1\lib\idea_rt.jar=55806:C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2020.1\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Connor\IdeaProjects\pointsClass\out\production\pointsClass TestFraction
+    Default constructor fraction = 0/1
+    New Fraction(10, -20) = -1/2
+    oneFourth = 1/4, oneEigth = 1/8
+    oneFourth + oneEigth = 3/8
+
+    Process finished with exit code 0
+     */
