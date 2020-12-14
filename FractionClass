@@ -1,0 +1,63 @@
+public class Fraction {
+    private int n;
+    private int d;
+    
+    public Fraction() {
+        n = 0;
+        d = 1;
+    }
+
+    public Fraction(int num, int denom) {
+        n = (denom < 0 ? -num : num);
+        if (denom == 0) {
+            throw new IllegalArgumentException();
+        }
+        d = (denom < 0 ? -denom : denom);
+        reduce();
+    }
+
+    private void reduce() {
+        int num = n;
+        int den = d;
+        int x = 0;
+        if (n < 0) {
+            num = -n;
+        }
+        if (num > den) {
+            x = den;
+        } else {
+            x = num;
+        }
+        int gcf = 0;
+        for (int i = 1; i <= x; i++) {
+            if (n % i == 0 && d % i == 0) {
+                gcf = i;
+            }
+        }
+        if (gcf != 0) {
+            n /= gcf;
+            d /= gcf;
+        }
+    }
+
+    public Fraction addTo(Fraction frac) {
+        Fraction sum = new Fraction();
+        sum.d = d * frac.d;
+        sum.n = n * frac.d + d * frac.n;
+        sum.reduce();
+        return sum;
+
+    }
+
+    public int getN() {
+        return n;
+    }
+
+    public int getD() {
+        return d;
+    }
+
+    public String toString() {
+        return n + "/" + d;
+    }
+}
