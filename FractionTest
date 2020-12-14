@@ -1,0 +1,12 @@
+public class TestFraction {
+    public static void main(String[] args) {
+        Fraction dcf = new Fraction();
+        System.out.println("Default constructor fraction = " + dcf.toString());
+        Fraction f1 = new Fraction(10, -20);
+        System.out.println("New Fraction(10, -20) = " + f1.toString());
+        Fraction oneFourth = new Fraction(1, 4);
+        Fraction oneEigth = new Fraction(1, 8);
+        System.out.println("oneFourth = " + oneFourth.toString() + ", oneEigth = " + oneEigth.toString());
+        System.out.println("oneFourth + oneEigth = " + oneFourth.addTo(oneEigth));
+    }
+}
